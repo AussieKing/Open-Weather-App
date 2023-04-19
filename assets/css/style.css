@@ -1,0 +1,114 @@
+@import url('https://fonts.googleapis.com/css2?family=Dosis:wght@300&family=Poppins:wght@100&300&500&display=swap');
+
+*{
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body{
+font-family: 'Poppins', sans-serif;
+background: url(https://images.unsplash.com/photo-1507525428034-b723cf961d3e?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1173&q=80);
+background-size: cover;
+background-repeat: no-repeat;
+overflow: hidden;
+height: 110vh; 
+/* sets image 100% of the Viewport height */
+}
+
+.container{
+    padding: 20px 70px;
+    color: #fff;
+}
+
+.currentInfo{
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+}
+
+.date-container{
+    weight: 300;
+}
+
+.date-container .time{
+    font-size: 50px;
+    font-weight: 500;
+}
+
+.date-container #am-pm{
+    font-size: 60px;
+    margin-left: 30px;
+}
+
+.date-container .date{
+    font-size: 50px;
+}
+
+.location-container{
+    text-align: end;
+}
+
+.location-container .location{
+    font-size: 30px;
+    font-weight: 200;
+}
+
+.location-container .country{
+    font-size: 14px;
+    font-weight: 700;
+}
+
+.currentInfo .others{
+ display: flex;
+ flex-direction: column;  
+ background-color: rgba(24, 24, 27, 0.6); 
+ padding: 20px;
+ border-radius: 10px;
+ margin: 10px 0;
+ border: 1px solid #eee; 
+}
+
+.currentInfo .others{
+    .weather-item
+    display: flex;
+    flex-direction: space-between;   
+   }
+
+.currentInfo .others .weather-item{
+    display: flex;
+    justify-content: space-between;
+}
+
+.future-weather-forecast{
+    display: flex;
+    background: rgba(24, 24, 27, 0.8);
+    color: #fff;
+    padding: 20px;
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+    align-items: center;
+    justify-content: center;
+}
+
+.future-weather-forecast .today{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.future-weather-forecast .today .day{
+    padding: 5px 15px;
+    background-color: #3c3c44;
+    border-radius: 20px;
+    text-align: center;
+}
+
+.future-weather-forecast .today .temperature{
+    font-size: 40px;
+}
+
+.future-weather-forecast .weather-forecast{
+    display: flex;
+}
