@@ -4,6 +4,15 @@
     box-sizing: border-box;
     margin: 0;
     padding: 0;
+    scroll-behavior: smooth;
+}
+
+header {
+    display: flex;
+    justify-content: center;
+    background-color: rgb(3, 195, 185);
+    color: whitesmoke;
+    padding: 30px;
 }
 
 body{
@@ -15,6 +24,14 @@ overflow: hidden;
 height: 110vh; 
 /* sets image 100% of the Viewport height */
 }
+
+/* SEARCH FUNCTION */
+.search {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  /* SEARCH FUNCTION */
 
 .container{
     padding: 20px 70px;
@@ -79,7 +96,7 @@ height: 110vh;
     justify-content: space-between;
 }
 
-.future-weather-forecast{
+.future-weather-forecast {
     display: flex;
     background: rgba(24, 24, 27, 0.8);
     color: #fff;
@@ -89,8 +106,10 @@ height: 110vh;
     width: 100%;
     align-items: center;
     justify-content: center;
-    overflow-y: hidden;
+    overflow-y: auto; /* Modified property: changed from "hidden" to "auto" */
+    max-height: 250px; /* Added property: set a maximum height to enable scrolling */
 }
+
 
 .future-weather-forecast .today{
     display: flex;
@@ -144,6 +163,25 @@ height: 110vh;
     font-size: 12px;
 }
 
+#future-forecast {
+    display: flex;
+    width: 80%;
+    height: 250px;
+    margin: 20px;
+    justify-content: space-between;
+}
+
+.forecast-item {
+    display: flex;
+    margin: 30px;
+    flex-direction: column;
+}
+
+.forecast-item p {
+    font-size: 14px;
+}
+
+
 @media screen and (max-width: 768px) {
 
     .container{
@@ -196,5 +234,197 @@ height: 110vh;
         justify-content: start;
         align-items: none;
         overflow-y: scroll;
+    }
+}
+
+
+/*! NEW CSS !!!! */
+
+h1 {
+    margin: 0;
+    font-size: 36px;
+}
+
+h3 {
+    font-size: 32px;
+}
+
+h4 {
+    font-size: 30px;
+}
+
+p {
+    font-family: Georgia, serif;
+    font-size: 20px;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f1f1f1;
+}
+
+main {
+    display: flex;
+}
+
+.content {
+    margin-top: 40px;
+    margin-left: 20px;
+    display: flex;
+    width: 20%;
+    flex-direction: column;
+}
+
+.results {
+    display: flex;
+    width: 60%;
+    flex-direction: column;
+    align-items: center;
+}
+
+.searching {
+    display: flex;
+    justify-content: center;
+    margin: 10px;
+    flex-direction: column;
+    border-block-end: solid rgb(57, 54, 59);
+}
+
+.searching button {
+    margin-bottom: 15px;
+}
+
+button {
+    line-height: 2.5;
+    margin-top: 10px;
+    padding: 0 20px;
+    font-size: 1rem;
+    text-align: center;
+    color: #fff;
+    border-radius: 10px;
+    background-color: rgb(139, 139, 139);
+    background-image: linear-gradient(to top left, rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0.2) 30%, rgba(0, 0, 0, 0));
+}
+
+#selected-city {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    width: 100%;
+    height: 300px;
+    margin: 40px;
+}
+
+#selected-city p {
+    font-size: 16px;
+}
+
+.search-result {
+    display: flex;
+    justify-content: flex-end;
+    margin: 10px;
+    flex-direction: column;
+    align-items: stretch;
+}
+
+#future-forecast {
+    display: flex;
+    width: 80%;
+    height: 250px;
+    margin: 20px;
+    justify-content: space-between;
+}
+
+.forecast-item {
+    display: flex;
+    margin: 30px;
+    flex-direction: column;
+}
+
+.forecast-item p {
+    font-size: 14px;
+}
+
+/*
+#clear {
+    display: flex;
+    margin: 10px;
+    align-items: stretch;
+    justify-content: center;
+    background-color: rgb(153, 205, 231);
+    background-image: linear-gradient(to top left, rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0.2) 30%, rgba(0, 0, 0, 0));
+}
+*/
+
+.minMax {
+    font-size: 13px;
+}
+
+
+@media screen and (max-width: 1189px) {
+    .content {
+        width: 100%;
+        margin-right: 20px;
+        margin-top: 20px;
+    }
+
+    .page {
+        flex-wrap: wrap;
+    }
+
+    .search-result {
+        flex-direction: row-reverse;
+        width: 95%;
+        justify-content: space-around;
+        flex-wrap: wrap;
+    }
+
+    .results {
+        width: 100%;
+    }
+
+    #future-forecast {
+        width: auto;
+    }
+
+}
+
+
+@media screen and (max-width: 880px) {
+
+    button {
+        width: 30%;
+        margin: 3px;
+    }
+
+    .searching button {
+        width: 100%;
+    }
+}
+
+@media screen and (max-width: 810px) {
+
+    button {
+        width: 40%;
+        margin: 3px;
+    }
+}
+
+
+@media screen and (max-width: 745px) {
+
+    #future-forecast {
+        flex-wrap: wrap;
+        justify-content: center;
+    }
+
+}
+
+@media screen and (max-width: 440px) {
+
+    button {
+        width: 95%;
+        margin: 3px;
     }
 }
