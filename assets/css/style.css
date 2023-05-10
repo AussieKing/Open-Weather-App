@@ -96,6 +96,30 @@ height: 110vh;
     justify-content: space-between;
 }
 
+.forecast-item{
+    display: flex;
+    flex-direction: column;
+    background: rgba(129, 129, 129, 0.6);
+    padding:20px;
+    min-height: fit-content;
+    border-radius: 10px;
+    margin: 30px 30px;
+    border: 1px solid #eee;
+    
+
+}
+
+#selected-city{
+    display: absolute;
+    flex-direction: column;
+    background: rgba(129, 129, 129, 0.6);
+    padding: 10px;
+    border-radius: 10px;
+    margin: 30px 30px;
+    border: 1px solid #eee;
+}
+
+
 .future-weather-forecast {
     display: flex;
     background: rgba(24, 24, 27, 0.8);
