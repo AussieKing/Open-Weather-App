@@ -1,102 +1,108 @@
-# 06 Server-Side APIs: Weather Dashboard
+# Aussie's Open Weather Hub
 
-## Your Task
+This application provides the user with the current weather and a five-day forecast of a selected city. 
+It allows the user to search for a city (providing auto suggestions if city name is in different countries), and once the city is selected, the city is saved to a list of recent searches. 
 
-Third-party APIs allow developers to access their data and functionality by making requests with specific parameters to a URL. Developers are often tasked with retrieving data from another application's API and using it in the context of their own. Your challenge is to build a weather dashboard that will run in the browser and feature dynamically updated HTML and CSS.
+## Table of Contents
 
-Use the [5 Day Weather Forecast](https://openweathermap.org/forecast5) to retrieve weather data for cities. The base URL should look like the following: `https://api.openweathermap.org/data/2.5/forecast?lat={lat}&lon={lon}&appid={API key}`. After registering for a new API key, you may need to wait up to 2 hours for that API key to activate.
+- [Features](#features)
+- [Installation and Usage](#installation-and-usage)
+- [Technologies Used](#technologies-used)
+- [Screenshots](#screenshots)
+- [Live URL and Repository](#live-url-and-repository)
+- [Credits](#credits)
+- [Contributing](#contributing)
+- [License](#license)
 
-**Hint**: Using the 5 Day Weather Forecast API, you'll notice that you will need to pass in coordinates instead of just a city name. Using the OpenWeatherMap APIs, how could we retrieve geographical coordinates given a city name?
+## Features
 
-You will use `localStorage` to store any persistent data. For more information on how to work with the OpenWeather API, refer to the [Full-Stack Blog on how to use API keys](https://coding-boot-camp.github.io/full-stack/apis/how-to-use-api-keys).
+ This app will run in the client browser and features HTML (dynamic) and CSS via jQuery, Bootstrap, Javascript and external APIs (Day.js for date and time, and OpenWeatherMap for weather forecast).
 
-## User Story
+ It saves data in the user's local storage, so that the search history remains on screen when returning/refreshing. Weather data gets updated.
 
-```
-AS A traveler
-I WANT to see the weather outlook for multiple cities
-SO THAT I can plan a trip accordingly
-```
+The application has the following features:
 
-## Acceptance Criteria
+- It has a Search button that allows the user to search for a city
+  - It auto-suggests the name/country when the user is typing.
+- It selects a custom image depending on which city the user types, by modifiying thr HTML string.
+- It has a Current Weather section that displays the current weather for the selected city
+  - The section is populated with the following data from the OpenWeather API:
+    - City and Country name
+    - The Date at the user's location
+    - OpenWeatherMaps's representative weather icon and description
+    - Temperature details
+      - Current temperature
+      - Minimum temperature
+      - Maximum temperature
+    - Humidity
+    - Wind speed
+- It has a Five Day Forecast section that displays the weather forecast for the selected city for the next five days
+  - The section is populated with the following data from the OpenWeather API:
+    - OpenWeatherMaps's representative Weather icon and Description
+    - Temperature details
+    - Humidity  
+    - Wind speed
 
-```
-GIVEN a weather dashboard with form inputs
-WHEN I search for a city
-THEN I am presented with current and future conditions for that city and that city is added to the search history
-WHEN I view current weather conditions for that city
-THEN I am presented with the city name, the date, an icon representation of weather conditions, the temperature, the humidity, and the wind speed
-WHEN I view future weather conditions for that city
-THEN I am presented with a 5-day forecast that displays the date, an icon representation of weather conditions, the temperature, the wind speed, and the humidity
-WHEN I click on a city in the search history
-THEN I am again presented with current and future conditions for that city
-```
+## Installation and Usage
 
-## Mock-Up
+Clone the repository to your local machine and open the `index.html` file in your browser to view the city weather hub application, or go to the [live site](#live-url-and-repository).
 
-The following image shows the web application's appearance and functionality:
+Open the application in your web browser and use the interface as described above.
 
-![The weather app includes a search option, a list of cities, and a five-day forecast and current weather conditions for Atlanta.](./Assets/06-server-side-apis-homework-demo.png)
+## Technologies Used
 
-## Grading Requirements
+- HTML
+- CSS
+- Bootstrap CSS Framework
+  - Responsive Design
+  - UI Components
+- JavaScript
+  - DOM Manipulation
+  - Event Listeners
+  - Event Handlers
+  - Local Storage
+  - Functions
+  - Classes
+  - API Calls
+- Day.js
+  - Date and Time Library
+- jQuery
+  - DOM Manipulation
 
-> **Note**: If a Challenge assignment submission is marked as “0”, it is considered incomplete and will not count towards your graduation requirements. Examples of incomplete submissions include the following:
->
-> * A repository that has no code
->
-> * A repository that includes a unique name but nothing else
->
-> * A repository that includes only a README file but nothing else
->
-> * A repository that only includes starter code
+## Screenshots
 
-This Challenge is graded based on the following criteria: 
+### Search bar and Auto-complete
 
-### Technical Acceptance Criteria: 40%
+### Selected city
 
-* Satisfies all of the above acceptance criteria plus the following:
+### 5 Days Weather Forecast
 
-    * Uses the OpenWeather API to retrieve weather data.
+### Custom background image depending on city searched
 
-    * Uses `localStorage` to store persistent data.
+### Desktop Browser - Showing the Search History List
 
-### Deployment: 32%
 
-* Application deployed at live URL.
 
-* Application loads with no errors.
+## Live URL and Repository
 
-* Application GitHub URL submitted.
+The live application can be accessed at the following URL: [Aussie's Open Weather Hub](https://)
 
-* GitHub repository that contains application code.
+The repository can be accessed at the following URL: [Open-Weather-App](https://)
 
-### Application Quality: 15%
+## Credits
 
-* Application user experience is intuitive and easy to navigate.
+- OpenWeatherMap.org for the weather data: [OpenWeather API](https://openweathermap.org/api)
 
-* Application user interface style is clean and polished.
+- Bootstrap for the responsive UI elements and CSS framework - [Bootstrap 5.2.3](https://getbootstrap.com/)
 
-* Application resembles the mock-up functionality provided in the Challenge instructions.
+- Day.js v1.11.7 for the date and time library: [Day.js](https://day.js.org/)
 
-### Repository Quality: 13%
+- jQuery v3.6.4 for the JavaScript library: [jQuery](https://jquery.com/)
 
-* Repository has a unique name.
+- unsplash for providing the free images to use as background [unsplash] (https://unsplash.com/)
 
-* Repository follows best practices for file structure and naming conventions.
+## License
 
-* Repository follows best practices for class/id naming conventions, indentation, quality comments, etc.
+This project is licensed under the terms of the MIT license.
 
-* Repository contains multiple descriptive commit messages.
-
-* Repository contains quality readme file with description, screenshot, and link to deployed application.
-
-## Review
-
-You are required to submit BOTH of the following for review:
-
-* The URL of the functional, deployed application.
-
-* The URL of the GitHub repository. Give the repository a unique name and include a readme describing the project.
-
-- - -
-© 2023 edX Boot Camps LLC. Confidential and Proprietary. All Rights Reserved.
+© 2023 AussieKing
