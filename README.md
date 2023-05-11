@@ -72,15 +72,19 @@ Open the application in your web browser and use the interface as described abov
 ## Screenshots
 
 ### Search bar and Auto-complete
+![Screen Shot 2023-05-11 at 1 41 10 pm](https://github.com/AussieKing/Open-Weather-App/assets/126050763/b4021804-d310-4412-b9b5-9470abf6dd17)
+
+### Last searches
+![Screen Shot 2023-05-11 at 1 31 16 pm](https://github.com/AussieKing/Open-Weather-App/assets/126050763/058edbd2-426c-43a2-94d4-cc7dc88451c4)
 
 ### Selected city
+![Screen Shot 2023-05-11 at 1 41 40 pm](https://github.com/AussieKing/Open-Weather-App/assets/126050763/be9760a2-0970-47df-b1ae-18f86fcab08f)
 
 ### 5 Days Weather Forecast
+![Screen Shot 2023-05-11 at 1 42 22 pm](https://github.com/AussieKing/Open-Weather-App/assets/126050763/b0ba173a-c720-40c2-ae14-80f3125fd03e)
 
 ### Custom background image depending on city searched
-
-### Desktop Browser - Showing the Search History List
-
+![Screen Shot 2023-05-11 at 1 43 12 pm](https://github.com/AussieKing/Open-Weather-App/assets/126050763/7c0d5879-733d-4e1f-bed6-377b9b8a2755)
 
 
 ## Live URL and Repository
