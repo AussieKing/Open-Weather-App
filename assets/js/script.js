@@ -170,3 +170,4 @@ window.onload = function () {
 
 // displaying previous searches as per the assessment demo
 displayCitiesButtons();
+

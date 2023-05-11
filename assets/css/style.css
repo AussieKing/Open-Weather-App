@@ -45,6 +45,13 @@ header {
     border: 1px solid #eee;
 }
 
+.vsc-initialized{
+    height: 100%;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
 body{
 display: flex;
 flex-direction: column;    
