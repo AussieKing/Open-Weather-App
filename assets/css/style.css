@@ -45,6 +45,10 @@ header {
     border: 1px solid #eee;
 }
 
+.vsc-initialized{
+    max-height: 100%;
+}
+
 body{
 display: flex;
 flex-direction: column;    
