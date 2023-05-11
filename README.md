@@ -89,9 +89,9 @@ Open the application in your web browser and use the interface as described abov
 
 ## Live URL and Repository
 
-The live application can be accessed at the following URL: [Aussie's Open Weather Hub](https://)
+The live application can be accessed at the following URL: [Aussie's Open Weather Hub](https://](https://aussieking.github.io/Open-Weather-App/)
 
-The repository can be accessed at the following URL: [Open-Weather-App](https://)
+The repository can be accessed at the following URL: [Open-Weather-App](https://](https://github.com/AussieKing/Open-Weather-App)
 
 ## Credits
 
