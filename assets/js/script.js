@@ -91,6 +91,8 @@ function getForecastFiveDays() {
         const temperature = item.main.temp;
         const windSpeed = item.wind.speed;
         const humidity = item.main.humidity;
+        
+        console.log(dayOfWeek);
 
         forecastDataElement.innerHTML += `
           <div class="forecast-card">
@@ -168,3 +170,4 @@ window.onload = function () {
 
 // displaying previous searches as per the assessment demo
 displayCitiesButtons();
+
