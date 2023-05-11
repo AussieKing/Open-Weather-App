@@ -54,10 +54,8 @@ font-family: 'Poppins', sans-serif;
 background-image: url('https://source.unsplash.com/1600x900/?landscape');
 background-size: cover;
 background-repeat: no-repeat;
-overflow: hidden; 
 font-size: 130%;
 max-height: 100; 
-border: 3px solid white;
 }
 
 main {
@@ -84,20 +82,17 @@ main {
 
 #upcoming-forecast{
     display: flex;
-    width: 50%;
-    height:250px;
+    /* width: 50%; */
+    height:500px;
     margin:20px;
     justify-content: space-between;
     background: rgba(184, 179, 179, 0.9);
     color: #fff;
     padding: 20px;
-    /* position: flex; */
-    /* height: 100vw;
-    bottom: 0; */
     width: fit-content;
     align-items: center;
-    overflow: auto; 
-    max-height: 250px; 
+    border: 1px solid white;
+    border-radius: 10px;
 }
 
 .minMax {
