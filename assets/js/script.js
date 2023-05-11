@@ -6,7 +6,6 @@ var currentCity = document.querySelector("#currentCity");
 searchCity.addEventListener("keyup", event => {
   const query = event.target.value;
   if (query.length > 2) {
-
     const url = `https://api.openweathermap.org/data/2.5/find?q=${query}&appid=${APIKey}`;
     fetch(url)
       .then(response => response.json())
@@ -27,7 +26,6 @@ searchCity.addEventListener("keyup", event => {
   }
 });
 
-
 function fetchWeather(city) {
   const apiUrl = `https://api.openweathermap.org/data/2.5/weather?q=${city}&appid=${APIKey}&units=metric`;
 
@@ -40,7 +38,7 @@ function fetchWeather(city) {
       }
     })
     .then(data => {
-      document.body.style.backgroundImage = "url('https://source.unsplash.com/1600x900/?" + city.name + "')";
+      document.body.style.backgroundImage = `url('https://source.unsplash.com/1600x900/?${city}')`;
       const date = new Date(data.dt * 1000);
       const formattedDate = date.toLocaleDateString("en-US", { weekday: "long", month: "long", day: "numeric" });
       const humidity = data.main.humidity;
@@ -55,21 +53,20 @@ function fetchWeather(city) {
         <h3>${city}</h3> 
         <per>${formattedDate}</per>
         <img src="http://openweathermap.org/img/w/${data.weather[0].icon}.png">
-      <div class=minMax>
-        <p>Humidity: ${humidity} %</p>
-        <per>Max Temp: ${tempMax} &deg;C</per><p></p>
-        <per>Min Temp: ${tempMin} &deg;C</per><p></p>
-      </div>  
+        <div class="minMax">
+          <p>Humidity: ${humidity} %</p>
+          <p>Max Temp: ${tempMax} &deg;C</p>
+          <p>Min Temp: ${tempMin} &deg;C</p>
+        </div>  
         <p>Temperature: ${temperature} &deg;C</p>
         <p>Wind Speed: ${windSpeed} m/s</p>
       `;
     })
+    .catch(error => console.error(error));
 }
 
 function getForecastFiveDays() {
-
   const city = document.getElementById("search-city").value;
-
   const apiUrl = `https://api.openweathermap.org/data/2.5/forecast?q=${city}&appid=${APIKey}&units=metric`;
 
   fetch(apiUrl)
@@ -82,9 +79,7 @@ function getForecastFiveDays() {
     })
     .then(data => {
       const forecastList = data.list;
-      const fiveDayForecast = forecastList.filter((item, index) => {
-        return index % 8 === 0;
-      });
+      const fiveDayForecast = forecastList.filter((item, index) => index % 8 === 0);
 
       const forecastDataElement = document.getElementById("upcoming-forecast");
       forecastDataElement.innerHTML = "";
@@ -108,6 +103,7 @@ function getForecastFiveDays() {
         `;
       });
     })
+    .catch(error => console.error(error));
 }
 
 $("#search-btn").on("click", function () {
@@ -117,10 +113,10 @@ $("#search-btn").on("click", function () {
 });
 
 
-//  Save Cities in LOCAL STORAGE
+// Save Cities in LOCAL STORAGE
 function saveCities() {
-  const newCity = $("#search-city").val();
-  if (!newCity.trim()) {
+  const newCity = $("#search-city").val().trim();
+  if (!newCity) {
     return;
   }
 
@@ -161,16 +157,14 @@ function displayCitiesButtons() {
   });
 }
 
-// using Brisbane as default city
+// using Brisbane as the default city
 window.onload = function () {
-  city = document.getElementById("search-city");
-  city.value = "Brisbane, AU";
+  const cityInput = document.getElementById("search-city");
+  cityInput.value = "Brisbane, AU";
   fetchWeather("Brisbane, AU");
   getForecastFiveDays();
-  city.value = '';
+  cityInput.value = '';
 };
 
-// displaying previous searches as per demo in assessment
+// displaying previous searches as per the assessment demo
 displayCitiesButtons();
-
-
