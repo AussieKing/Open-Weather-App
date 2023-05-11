@@ -36,9 +36,10 @@ The application has the following features:
       - Maximum temperature
     - Humidity
     - Wind speed
-- It has a Five Day Forecast section that displays the weather forecast for the selected city for the next five days
+- It has a 5 Day Forecast section that displays the weather forecast for the selected city for the next five days
   - The section is populated with the following data from the OpenWeather API:
     - OpenWeatherMaps's representative Weather icon and Description
+    - Day of week of the forecast
     - Temperature details
     - Humidity  
     - Wind speed
@@ -81,7 +82,8 @@ Open the application in your web browser and use the interface as described abov
 ![Screen Shot 2023-05-11 at 1 41 40 pm](https://github.com/AussieKing/Open-Weather-App/assets/126050763/be9760a2-0970-47df-b1ae-18f86fcab08f)
 
 ### 5 Days Weather Forecast
-![Screen Shot 2023-05-11 at 1 42 22 pm](https://github.com/AussieKing/Open-Weather-App/assets/126050763/b0ba173a-c720-40c2-ae14-80f3125fd03e)
+![Screen Shot 2023-05-11 at 3 21 01 pm](https://github.com/AussieKing/Open-Weather-App/assets/126050763/dee92ddd-6b80-42e1-8558-4789bb650dc0)
+
 
 ### Custom background image depending on city searched
 ![Screen Shot 2023-05-11 at 1 43 12 pm](https://github.com/AussieKing/Open-Weather-App/assets/126050763/7c0d5879-733d-4e1f-bed6-377b9b8a2755)
