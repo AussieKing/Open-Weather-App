@@ -1,4 +1,4 @@
-const APIKey = "912e462414bad344e84da69fdda45e52";
+const APIKey = process.env.OPENWEATHERMAP_API_KEY;
 const cityList = document.querySelector("#cities-list");
 const searchCity = document.querySelector("#search-city");
 var currentCity = document.querySelector("#currentCity");
